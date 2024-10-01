@@ -1,42 +1,122 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: auto;
+}
+
+#left-side, #right-side {
+    display: flex;
+    flex: 1;
+}
+
+#left-side {
+    flex-direction: column;
+    max-width: 500px;
+}
+
+#right-side {
+    margin-top: 0;
+    padding: 0 25px;
+    max-width: 500px;
+}
+
+#right-side p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*INPUT SECTION*/
+
 input {
     padding: 10px;
     border-radius: 20px;
     border: black 2px solid;
+    /*max-width: 500px;*/
 }
 
-button {
+#task-button {
     padding: 10px;
     border-radius: 20px;
     border: black 2px solid;
+    background-color: rgba(200, 200, 200, 0.3);
 }
+
+/*TASK LIST SECTION*/
 
 ul {
     list-style-type: none;
     padding: 0;
-    /*border: black 1px solid;*/
 }
 
 li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
     margin: 5px;
-    padding: 5px;
+    padding: 0;
     border: black 2px solid;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
-p {
-    display: inline;
+li p {
+    margin: 0 25px;
+    font-size: 25px;
+    max-width: calc(100% - 190px);
+    min-height: 50px;
 }
 
-/*li button {*/
-/*    justify-items: end;*/
-/*}*/
-
-list-pair {
-
+.button-div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 50px;
+    max-width: 130px;
 }
 
-/*header, section {*/
-/*    border: black 1px solid;*/
-/*}*/
+.comp-button {
+/*    flex-grow: 1;*/
+    margin: 0;
+/*    border-radius: 0;*/
+    height: 100%;
+    min-height: 25px;
+    background-color: rgba(200, 200, 200, 0.3);
+    border-top-right-radius: 20px;
+/*    border-left: 1px black solid;*/
+/*    border-right: 1px black solid;*/
+/*    border-top: none;*/
+    border: 0;
+    border-bottom: 1px black solid;
+    border-left: 1px black solid;
+}
+
+.rem-button {
+/*    flex-grow: 1;*/
+    margin: 0;
+    border-bottom-right-radius: 20px;
+    height: 100%;
+    min-height: 25px;
+    background-color: rgba(200, 200, 200, 0.3);
+    border: none;
+    border-left: 1px black solid;
+}
+
+.incomplete-task {
+    background-color: rgb(255, 65, 87);
+}
+
+.complete-task {
+    background-color: rgb(26, 204, 100);
+}

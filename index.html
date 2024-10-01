@@ -12,14 +12,29 @@
     </header>
 
     <main>
-        <section id="controls-section">
-            <input type="text" id="task-input" placeholder="Type task here">
-            <button id="task-button" onclick="addTask()">Add Task</button>
+
+        <section id="left-side">
+
+            <section id="controls-section">
+                <input type="text" id="task-input" placeholder="Type task here">
+                <button id="task-button" onclick="addTask()">Add Task</button>
+            </section>
+
+            <section id="task-list-section">
+                <ul id="task-list"></ul>
+            </section>
+
         </section>
 
-        <section id="task-list-section">
-            <ul id="task-list"></ul>
+        <section id="right-side">
+            <p>
+                Use the text input field to type in tasks. When you press the 'add task' button they will appear in the
+                task list.
+                The buttons on the right can delete the task from the list or toggle between complete and incomplete.
+                If you want to edit a task in the list, just click on the task text and a pop-up will appear.
+            </p>
         </section>
+
     </main>
 
     <script src="index.js"></script>
